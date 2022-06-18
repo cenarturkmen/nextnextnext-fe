@@ -1,0 +1,35 @@
+.home {
+  background-image: url('../static/bg-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#exploreButton{
+    margin: 2rem;
+    padding: 1rem 2rem;
+}
+
+#createButton{
+    margin: 1rem;
+    padding: 1rem 2rem;
+}
+
+.imageList{
+    padding-top: 1rem;
+    padding-right: 2rem
+}
