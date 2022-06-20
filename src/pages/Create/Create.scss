@@ -30,3 +30,33 @@ fieldset {
   margin-top: 1rem;
   margin-left: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  .create {
+    width: 100%;
+  }
+
+  fieldset {
+    width: 100%;
+    margin: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .uploadImage {
+    width: 100%;
+  }
+  
+  .dropzone {
+    margin-left: 2rem;
+  }
+
+  .closeIcon{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+  }
+    
+}

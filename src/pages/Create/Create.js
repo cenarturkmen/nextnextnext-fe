@@ -41,12 +41,12 @@ const Create = () => {
             <div className="uploadImage">
               <DropZone className="dropzone" onFileUploaded={setSelectedFile} />
             </div>
+            <div className="closeIcon">
+              <Link to="/">
+                <CancelOutlinedIcon fontSize="large" />
+              </Link>
+            </div>
             <form onSubmit={createNFT}>
-              <div>
-                <Link to="/">
-                  <CancelOutlinedIcon fontSize="large" />
-                </Link>
-              </div>
               <fieldset>
                 <TextField
                   label="Title"
