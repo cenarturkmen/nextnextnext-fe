@@ -10,7 +10,7 @@ export const theme = createTheme({
       main: "#f2f2f2",
     },
     text: {
-      primary: "rgba(0,0,0,0)",
+      primary: "#black",
     },
   },
   props: {
