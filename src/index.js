@@ -8,6 +8,7 @@ import { theme } from "./theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
 
 import Home from './pages/Home/Home';
+import Create  from './pages/Create/Create';
 
 
 
@@ -18,6 +19,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/create" element={<Create />} />
       <Route path="*" element={<div>Not Found</div>} />
     </Routes>
   </Router>
