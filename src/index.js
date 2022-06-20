@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { theme } from "./theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
 
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 
 
 
