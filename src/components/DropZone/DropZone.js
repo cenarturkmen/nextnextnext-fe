@@ -1,9 +1,11 @@
-import  {useState, useCallback} from 'react';
-import {useDropzone} from 'react-dropzone';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { useState, useCallback } from "react";
+import { useDropzone } from "react-dropzone";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
-const DropZone = ({onFileUploaded}) => {
-  const [selectedFileUrl, setSelectedFileUrl] = useState('');
+import "./DropZone.scss";
+
+const DropZone = ({ onFileUploaded }) => {
+  const [selectedFileUrl, setSelectedFileUrl] = useState("");
 
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -17,21 +19,21 @@ const DropZone = ({onFileUploaded}) => {
     [onFileUploaded]
   );
 
-  const {getRootProps, getInputProps} = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    accept: 'image/*',
+    accept: "image/*",
   });
 
   return (
-    <div {...getRootProps()}>
+    <div className="dropzone" {...getRootProps()}>
       <input {...getInputProps()} accept="image/*" />
 
       {selectedFileUrl ? (
-        <img src={selectedFileUrl} alt="Point thumbnail" />
+        <img src={selectedFileUrl} alt="Point thumbnail" type="hidden" />
       ) : (
         <p>
-          <CloudUploadIcon />
-          NFT image
+          <CloudUploadIcon color="primary" />
+          NFT Image
         </p>
       )}
     </div>

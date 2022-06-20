@@ -1,0 +1,32 @@
+.create {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  min-width: 240px;
+  margin-top: 3.5rem;
+  margin-left: 2rem;
+  border: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.uploadImage {
+  min-width: 400px;
+  margin-top: 2rem;
+}
+
+#submitButton {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
