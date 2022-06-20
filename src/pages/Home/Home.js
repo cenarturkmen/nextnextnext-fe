@@ -1,9 +1,9 @@
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
-import './Home.scss';
-import Navbar from '../../components/Navbar/Navbar';
-import ImageListComponent from '../../components/ImageList/ImageList';
+import "./Home.scss";
+import Navbar from "../../components/Navbar/Navbar";
+import ImageListComponent from "../../components/ImageList/ImageList";
 
 const Home = () => {
   return (
@@ -17,7 +17,14 @@ const Home = () => {
               <Typography variant="h3"> extraordinary NFTs</Typography>
             </div>
             <div className="buttons">
-              <Button id="exploreButton" size="large" variant="contained">
+              <Button
+                id="exploreButton"
+                size="large"
+                variant="contained"
+                onClick={() => {
+                  window.location.href = "/explore";
+                }}
+              >
                 Explore
               </Button>
               <Button
@@ -26,6 +33,9 @@ const Home = () => {
                 size="large"
                 variant="contained"
                 color="secondary"
+                onClick={() => {
+                  window.location.href = "/create";
+                }}
               >
                 Create
               </Button>
