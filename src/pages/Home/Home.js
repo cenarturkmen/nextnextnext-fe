@@ -2,13 +2,11 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 import "./Home.scss";
-import Navbar from "../../components/Navbar/Navbar";
 import ImageListComponent from "../../components/ImageList/ImageList";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
       <div className="home">
         <div className="body">
           <div className="body-right">

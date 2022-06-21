@@ -11,10 +11,13 @@ import Home from "./pages/Home/Home";
 import Create from "./pages/Create/Create";
 import Explore from "./pages/Explore/Explore";
 
+import Navbar from "./components/Navbar/Navbar";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider theme={theme}>
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

@@ -1,13 +1,11 @@
 import { Typography, ImageList, Divider } from "@mui/material";
 
 import "./Explore.scss";
-import Navbar from "../../components/Navbar/Navbar";
 import NftItem from "../../components/NftItem/NftItem";
 
 const Explore = () => {
   return (
     <div className="explore">
-      <Navbar />
       <div className="exploreBody">
         <div className="heading">
           <Typography variant="h3">Explore</Typography>
