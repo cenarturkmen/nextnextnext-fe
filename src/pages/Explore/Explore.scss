@@ -16,4 +16,20 @@
 
 #imageList {
   overflow: hidden;
+  margin: 0 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+.MuiImageList-root .MuiImageList-vowen .MuiImageList-woven .MuiImageList-root {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 600px) {
+  .MuiImageList-root
+    .MuiImageList-vowen
+    .MuiImageList-woven
+    .MuiImageList-root
+    #imageList {
+    grid-template-columns: unset;
+    background: red;
+  }
 }

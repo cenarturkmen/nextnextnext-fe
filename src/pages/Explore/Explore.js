@@ -19,8 +19,7 @@ const Explore = () => {
             <div className="nft">
               <ImageList
                 id="imageList"
-                sx={{ width: 1200, height: 850 }}
-                cols={5}
+                cols={window.innerWidth > 600 ? 5 : 2}
                 variant="vowen"
               >
                 {itemData.map((item) => (

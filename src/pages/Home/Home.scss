@@ -1,5 +1,5 @@
 .home {
-  background-image: url('../../static/bg-1.png');
+  background-image: url("../../static/bg-1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,28 +8,37 @@
   flex-direction: column;
 }
 
-.body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.heading{
-    margin-top: 2rem;
-    margin-left: 2rem;
+.heading {
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
-#exploreButton{
-    margin: 2rem;
-    padding: 1rem 2rem;
+#exploreButton {
+  margin: 2rem;
+  padding: 1rem 2rem;
 }
 
-#createButton{
-    margin: 1rem;
-    padding: 1rem 2rem;
+#createButton {
+  margin: 1rem;
+  padding: 1rem 2rem;
 }
 
-.imageList{
-    padding-top: 1rem;
-    padding-right: 2rem
+.imageList {
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .body {
+    flex-direction: column;
+  }
+  .imageList {
+    padding-right: 0;
+  }
 }
