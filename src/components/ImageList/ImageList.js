@@ -19,6 +19,7 @@ const ImageListComponent = () => {
             subtitle={<span>by: {item.author}</span>}
             position="below"
           />
+          
         </ImageListItem>
       ))}
     </ImageList>
@@ -27,7 +28,7 @@ const ImageListComponent = () => {
 
 export default ImageListComponent;
 
-// r
+
 const itemData = [
   {
     img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",

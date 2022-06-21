@@ -1,0 +1,19 @@
+.exploreBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
+
+.nfts {
+  overflow: hidden;
+}
+
+#imageList {
+  overflow: hidden;
+}

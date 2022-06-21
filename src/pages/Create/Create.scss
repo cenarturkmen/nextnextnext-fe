@@ -30,6 +30,12 @@ fieldset {
   margin-top: 1rem;
   margin-left: 2rem;
 }
+.createBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+}
 
 @media screen and (max-width: 600px) {
   .create {

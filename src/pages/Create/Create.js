@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Input, TextField, InputAdornment } from "@mui/material";
+import { Divider, TextField, InputAdornment } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 
 import "./Create.scss";
@@ -36,7 +36,9 @@ const Create = () => {
           <div className="heading">
             <Typography variant="h3">Create NFT</Typography>
             <Typography variant="h6"> Upload your nft and sell it</Typography>
+
           </div>
+          <Divider />
           <div className="content">
             <div className="uploadImage">
               <DropZone className="dropzone" onFileUploaded={setSelectedFile} />
