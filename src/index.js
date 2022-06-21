@@ -13,7 +13,7 @@ import Explore from "./pages/Explore/Explore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ThemeProvider theme={theme("dark")}>
+  <ThemeProvider theme={theme}>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
