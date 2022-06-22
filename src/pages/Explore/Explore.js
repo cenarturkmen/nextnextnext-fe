@@ -1,13 +1,11 @@
 import { Typography, ImageList, Divider } from "@mui/material";
 
-import "./Explore.scss";
-import Navbar from "../../components/Navbar/Navbar";
+import "./Explore.css";
 import NftItem from "../../components/NftItem/NftItem";
 
 const Explore = () => {
   return (
     <div className="explore">
-      <Navbar />
       <div className="exploreBody">
         <div className="heading">
           <Typography variant="h3">Explore</Typography>
@@ -19,8 +17,7 @@ const Explore = () => {
             <div className="nft">
               <ImageList
                 id="imageList"
-                sx={{ width: 1200, height: 850 }}
-                cols={5}
+                cols={window.innerWidth > 600 ? 5 : 2}
                 variant="vowen"
               >
                 {itemData.map((item) => (

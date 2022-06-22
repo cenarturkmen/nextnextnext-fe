@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Divider, TextField, InputAdornment } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 
-import "./Create.scss";
+import "./Create.css";
 import Navbar from "../../components/Navbar/Navbar";
 import DropZone from "../../components/DropZone/DropZone";
 

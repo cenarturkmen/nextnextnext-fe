@@ -5,7 +5,8 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 
 const ImageListComponent = () => {
   return (
-    <ImageList sx={{ width: 400, height: 450 }}>
+    //    <ImageList sx={{ width: 300, height: 450 }}>
+    <ImageList>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -19,7 +20,6 @@ const ImageListComponent = () => {
             subtitle={<span>by: {item.author}</span>}
             position="below"
           />
-          
         </ImageListItem>
       ))}
     </ImageList>
@@ -27,7 +27,6 @@ const ImageListComponent = () => {
 };
 
 export default ImageListComponent;
-
 
 const itemData = [
   {
