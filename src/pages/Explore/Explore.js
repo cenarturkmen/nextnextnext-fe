@@ -1,6 +1,6 @@
 import { Typography, ImageList, Divider } from "@mui/material";
 
-import "./Explore.scss";
+import "./Explore.css";
 import NftItem from "../../components/NftItem/NftItem";
 
 const Explore = () => {

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "./Navbar.scss";
+import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import DefinexLogoSVG from "../../svg/DefinexLogoSVG";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";

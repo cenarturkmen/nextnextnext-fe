@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
-import "./DropZone.scss";
+import "./DropZone.css";
 
 const DropZone = ({ onFileUploaded }) => {
   const [selectedFileUrl, setSelectedFileUrl] = useState("");

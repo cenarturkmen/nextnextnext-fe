@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import {theme} from './theme/theme';
+import {ThemeProvider} from '@mui/material/styles';
+import Home from './pages/Home/Home';
+import Create from './pages/Create/Create';
+import Explore from './pages/Explore/Explore';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/create-nft" component={Create} />
+            <Route path="/explore" component={Explore} />
+            <Route>404 Not Found!</Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
+      ,
     </div>
   );
 }
