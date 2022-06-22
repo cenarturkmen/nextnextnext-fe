@@ -15,7 +15,7 @@ function App() {
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/create-nft" component={Create} />
+            <Route path="/create" component={Create} />
             <Route path="/explore" component={Explore} />
             <Route>404 Not Found!</Route>
           </Switch>
