@@ -61,8 +61,10 @@ const Home = () => {
               .get(`/tokens/${tokenId}`)
               .catch((err) => {
                 console.log("Err: ", err);
-              });
-            console.log("response: ", response);
+            });
+
+            if(!response.data)
+            continue;
 
             itemsList.push({
               name: response.data.name,
@@ -74,7 +76,7 @@ const Home = () => {
               uri: item.uri,
               isForSale: false,
               saleId: null,
-              price: 0,
+              price: response.data.price,
               isSold: null,
             });
           }
