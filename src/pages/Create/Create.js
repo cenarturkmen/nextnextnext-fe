@@ -66,6 +66,9 @@ const Create = () => {
               });
             console.log("response: ", response);
 
+            if(!response.data)
+            continue;
+
             itemsList.push({
               name: response.data.name,
               description: response.data.description,
@@ -76,7 +79,7 @@ const Create = () => {
               uri: item.uri,
               isForSale: false,
               saleId: null,
-              price: 0,
+              price: response.data.price,
               isSold: null,
             });
           }
@@ -196,7 +199,7 @@ const Create = () => {
       //   price: 0,
       //   isSold: null
       // }]);
-      history.push('/');
+      history.push('/explore');
     } catch (error) {
       console.error("Error, minting: ", error);
       alert("Error while minting!");
@@ -205,7 +208,6 @@ const Create = () => {
 
   return (
     <>
-      <Navbar />
       <div className="create">
         <div className="createBody">
           <div className="heading">
