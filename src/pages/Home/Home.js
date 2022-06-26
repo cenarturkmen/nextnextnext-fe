@@ -6,6 +6,7 @@ import ImageListComponent from "../../components/ImageList/ImageList";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { api } from "../../services/api";
+import Slider from './../../components/Slider/Slider';
 
 import ArtMarketplace from "../../contracts/ArtMarketplace.json";
 import ArtToken from "../../contracts/ArtToken.json";
@@ -162,7 +163,7 @@ const Home = () => {
           <div>
             <div className="imageList">
               <div className="images">
-                <ImageListComponent />
+                <Slider />
               </div>
             </div>
           </div>
