@@ -11,6 +11,10 @@
   box-shadow: 0 16px 70px -12.125px rgba(0, 0, 0, 0.3);
 }
 
+.item-heading {
+  word-break: break-all;
+}
+
 .item-divider {
   margin: 6px 0;
 }
