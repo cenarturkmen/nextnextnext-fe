@@ -23,7 +23,6 @@ function App() {
           </Switch>
         </Router>
       </ThemeProvider>
-      ,
     </div>
   );
 }

@@ -75,9 +75,6 @@ const Item = () => {
       ) : (
         <main>
           <header className="pageHeader">
-            <Link to="/">
-              <KeyboardBackspaceIcon fontSize="large" />
-            </Link>
           </header>
           <section>
             <Grid container spacing={0} alignItems="center" justify="center">

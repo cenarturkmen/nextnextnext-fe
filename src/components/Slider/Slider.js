@@ -30,7 +30,7 @@ const Slider = (props) => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 400, flexGrow: 1, marginTop:5}}>
       <Paper
         square
         elevation={0}
@@ -42,7 +42,7 @@ const Slider = (props) => {
           bgcolor: "background.default",
         }}
       >
-        <Typography>{props.images[activeStep].label}</Typography>
+      <Typography variant="body1">{props.images[activeStep].label}</Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -56,7 +56,7 @@ const Slider = (props) => {
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  height: 400,
                   display: "block",
                   maxWidth: 400,
                   overflow: "hidden",
