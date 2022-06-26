@@ -125,7 +125,7 @@ const Item = () => {
                     name="price"
                     variant="filled"
                     margin="dense"
-                    defaultValue={Web3.utils.fromWei(String(price), 'ether')}
+                    defaultValue={price}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">ETH</InputAdornment>
@@ -138,7 +138,7 @@ const Item = () => {
                     <Button
                       variant="contained"
                       color="primary"
-                      onClick={() => putForSale(tokenId, 200)}
+                      onClick={() => putForSale(tokenId, price)}
                     >
                       Sell
                     </Button>
@@ -147,7 +147,7 @@ const Item = () => {
                     <Button
                       variant="contained"
                       color="primary"
-                      onClick={() => buy(saleId, 200)}
+                      onClick={() => buy(saleId, price)}
                     >
                       Buy
                     </Button>
