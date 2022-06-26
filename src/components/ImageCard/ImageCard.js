@@ -30,13 +30,15 @@ const ImageCard = ({tokenId, name, image, price, owner, isForSale}) => {
               <Typography className="item-heading" variant={'h5'} gutterBottom>
                 {name}
               </Typography>
-              <Chip
+              {isForSale ? (              <Chip hidden={!isForSale}
                 size="small"
                 disabled={true}
                 label="Selling"
                 className="item-badge"
-              />
+              />) : ''}
+
             </div>
+            <div>
             <Typography variant="body1" className="item-price">
               <SvgIcon
                 component={EthereumLogo}
@@ -53,6 +55,7 @@ const ImageCard = ({tokenId, name, image, price, owner, isForSale}) => {
             >
               {owner.slice(0, 7)}...{owner.slice(-4)}
             </Typography>
+            </div>
           </CardContent>
         </CardActionArea>
       </Card>
