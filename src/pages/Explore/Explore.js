@@ -1,23 +1,24 @@
-import { Typography, ImageList, Divider } from "@mui/material";
-import getWeb3 from "../../utils/getWeb3";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { api } from "../../services/api";
+import {Typography, ImageList, Divider} from '@mui/material';
+import getWeb3 from '../../utils/getWeb3';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {api} from '../../services/api';
+import Card from '../../components/ImageCard/ImageCard';
+import Grid from '@mui/material/Grid';
 
-import ArtMarketplace from "../../contracts/ArtMarketplace.json";
-import ArtToken from "../../contracts/ArtToken.json";
+import ArtMarketplace from '../../contracts/ArtMarketplace.json';
+import ArtToken from '../../contracts/ArtToken.json';
 
 import {
   setNft,
   setAccount,
   setTokenContract,
   setMarketContract,
-} from "../../redux/actions/nftActions";
-import "./Explore.css";
-import NftItem from "../../components/NftItem/NftItem";
+} from '../../redux/actions/nftActions';
+import './Explore.css';
+import NftItem from '../../components/NftItem/NftItem';
 
 const Explore = () => {
-
   const nft = useSelector((state) => state.allNft.nft);
   const dispatch = useDispatch();
 
@@ -29,13 +30,13 @@ const Explore = () => {
         const accounts = await web3.eth.getAccounts();
 
         if (typeof accounts === undefined) {
-          alert("Please login with Metamask!");
-          console.log("login to metamask");
+          alert('Please login with Metamask!');
+          console.log('login to metamask');
         }
 
         const networkId = await web3.eth.net.getId();
         try {
-          console.log(ArtToken)
+          console.log(ArtToken);
           const artTokenContract = new web3.eth.Contract(
             ArtToken.abi,
             ArtToken.networks[networkId].address
@@ -59,11 +60,10 @@ const Explore = () => {
             const response = await api
               .get(`/tokens/${tokenId}`)
               .catch((err) => {
-                console.log("Err: ", err);
-            });
+                console.log('Err: ', err);
+              });
 
-            if(!response.data)
-            continue;
+            if (!response.data) continue;
 
             itemsList.push({
               name: response.data.name,
@@ -107,9 +107,9 @@ const Explore = () => {
           dispatch(setMarketContract(marketplaceContract));
           dispatch(setNft(itemsList));
         } catch (error) {
-          console.error("Errorrrrrr", error);
+          console.error('Errorrrrrr', error);
           alert(
-            "Contracts not deployed to the current network " +
+            'Contracts not deployed to the current network ' +
               networkId.toString()
           );
         }
@@ -134,108 +134,24 @@ const Explore = () => {
           <Typography variant="h6">Find the best NFTs to buy</Typography>
           <Divider />
         </div>
-        <div className="content">
-          <div className="nfts">
-            <div className="nft">
-              <ImageList
-                id="imageList"
-                cols={window.innerWidth > 600 ? 5 : 2}
-                variant="vowen"
-              >
-                {nftItems.map((item) => (
-                  <NftItem
-                    key={item.image}
-                    img={item.image}
-                    title={item.name}
-                    author={item.owner}
-                  />
-                ))}
-              </ImageList>
-            </div>
-          </div>
-        </div>
+        <section className="allNfts">
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
+          >
+            {nftItems.map((nft) => (
+              <Grid item key={nft.tokenId}>
+                <Card {...nft} />
+              </Grid>
+            ))}
+          </Grid>
+        </section>
       </div>
     </div>
   );
 };
 
 export default Explore;
-
-const itemData = [
-  {
-    img: "https://source.unsplash.com/random/?city,night",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/400x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/user/wsanter",
-    title: "Coffee",
-    author: "@nolanissac",
-  },
-  {
-    img: "https://source.unsplash.com/random/300x300?city,night",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/300x300?anime",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/300x300?nike",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/300x300?street",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/300x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/400x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/400x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-
-  {
-    img: "https://source.unsplash.com/random/400x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/431x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/410x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/430x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://source.unsplash.com/random/450x300?party",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-];
