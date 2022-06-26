@@ -132,7 +132,6 @@ const Explore = () => {
         <div className="heading">
           <Typography variant="h3">Explore</Typography>
           <Typography variant="h6">Find the best NFTs to buy</Typography>
-          <Divider />
         </div>
         <section className="allNfts">
           <Grid

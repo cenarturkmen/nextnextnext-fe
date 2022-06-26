@@ -11,6 +11,13 @@ import Slider from './../../components/Slider/Slider';
 import ArtMarketplace from "../../contracts/ArtMarketplace.json";
 import ArtToken from "../../contracts/ArtToken.json";
 
+import  bestEnv from "../../static/images/bestenvironmentforbestpeople.png";
+import  definext from "../../static/images/definenext.png";
+import driven from "../../static/images/drivenbyimpact.png";
+import future from "../../static/images/futureinmind.png"
+
+
+
 import {
   setNft,
   setAccount,
@@ -19,7 +26,7 @@ import {
 } from "../../redux/actions/nftActions";
 
 const Home = () => {
-
+  console.log(bestEnv )
   const nft = useSelector((state) => state.allNft.nft);
   const dispatch = useDispatch();
 
@@ -132,8 +139,11 @@ const Home = () => {
         <div className="body">
           <div className="body-right">
             <div className="heading">
-              <Typography variant="h3"> Discover, collect and sell</Typography>
-              <Typography variant="h3"> extraordinary NFTs</Typography>
+            <Typography variant="h2"> Discover, collect and sell</Typography>
+              <Typography id="extra" variant="h2">
+                {' '}
+                extraordinary NFTs
+              </Typography>
             </div>
             <div className="buttons">
               <Button
@@ -175,26 +185,21 @@ const Home = () => {
 
 export default Home;
 
-
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+    label: "Best Environment for Best People",
+    imgPath: bestEnv,
   },
   {
-    label: "Bird",
-    imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+    label: "Future in Mind",
+    imgPath: future,
   },
   {
-    label: "Bali, Indonesia",
-    imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
+    label: "Define Next",
+    imgPath: definext,
   },
   {
-    label: "Goč, Serbia",
-    imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+    label: "Driven by Impact",
+    imgPath: driven,
   },
 ];

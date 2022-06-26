@@ -21,7 +21,6 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="navbar-right">
-          <AccountBoxOutlinedIcon fontSize="large" />
           <AccountBalanceWalletOutlinedIcon fontSize="large" />
           <Typography variant="subtitle1">{account.slice(0,7)}...{account.slice(-4)}</Typography>
         </div>
