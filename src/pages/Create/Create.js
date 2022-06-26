@@ -178,7 +178,6 @@ const Create = () => {
       mint(response.data.message);
     } catch (error) {
       console.log(error);
-      // error.response.data
     }
   }
 
@@ -187,18 +186,6 @@ const Create = () => {
       const receipt = await artTokenContract.methods
         .mint(tokenMetadataURL)
         .send({ from: account });
-      console.log(receipt);
-      console.log(receipt.events.Transfer.returnValues.tokenId);
-      // setItems(items => [...items, {
-      //   tokenId: receipt.events.Transfer.returnValues.tokenId,
-      //   creator: accounts[0],
-      //   owner: accounts[0],
-      //   uri: tokenMetadataURL,
-      //   isForSale: false,
-      //   saleId: null,
-      //   price: 0,
-      //   isSold: null
-      // }]);
       history.push('/explore');
     } catch (error) {
       console.error("Error, minting: ", error);
