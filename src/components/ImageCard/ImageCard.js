@@ -43,7 +43,7 @@ const ImageCard = ({tokenId, name, image, price, owner, isForSale}) => {
                 viewBox="0 0 400 426.6"
                 titleAccess="ETH"
               />
-              <span>{Web3.utils.fromWei(String(price), 'ether')}.120000</span>
+              <span>{Web3.utils.fromWei(String(price), 'ether')}</span>
             </Typography>
             <Divider className="item-divider" light />
             <Typography

@@ -12,6 +12,7 @@ import DropZone from "../../components/DropZone/DropZone";
 import { api } from "../../services/api";
 import ArtMarketplace from "../../contracts/ArtMarketplace.json";
 import ArtToken from "../../contracts/ArtToken.json";
+import Web3 from 'web3';
 
 import {
   setNft,
@@ -157,7 +158,7 @@ const Create = () => {
     const data = new FormData();
     data.append("name", title);
     data.append("description", description);
-    data.append("price", price);
+    data.append("price", Web3.utils.toWei(price));
 
     if(selectedFile){
       data.append('img', selectedFile);

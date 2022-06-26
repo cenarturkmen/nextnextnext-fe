@@ -56,9 +56,10 @@ const Item = () => {
 
   async function buy(saleId, price) {
     try {
+      const price2 = Web3.utils.fromWei(String(price), 'ether');
       const receipt = await marketplaceContract.methods
         .buyItem(saleId)
-        .send({gas: 210000, value: price, from: account});
+        .send({ gas: 210000, value: price, from: account });
       console.log(receipt);
       const id = receipt.events.itemSold.id; ///saleId
     } catch (error) {
@@ -125,7 +126,7 @@ const Item = () => {
                     name="price"
                     variant="filled"
                     margin="dense"
-                    defaultValue={price}
+                    defaultValue={Web3.utils.fromWei(String(price), 'ether')}
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">ETH</InputAdornment>
